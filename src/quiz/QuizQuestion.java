@@ -16,30 +16,34 @@ public interface QuizQuestion {
 	void setQuestion(String question);
 	
 	/**
-	 * Get the question text for the question id
+	 * Add an answer choice specifying if correct or not using a boolean variable
 	 * 
-	 * @param questionId
-	 * @return question text
-	 */
-	String getQuestion(int questionId);
-	
-	/**
-	 * Set a question answer indicating if correct
-	 * 
-	 * @param answerChoice 
+	 * @param answerChoice
 	 * @param correct
 	 * 
 	 */
-	void setAnswer(String answerChoice, boolean correct);
+	void addAnswerChoice(String answerChoice, boolean correct);
+	
+	/**
+	 * Set the correct answer
+	 * 
+	 * @param choice
+	 */
+	void setAnswer(int choice);
+	
+	/**
+	 * Get the correct answer number
+	 * 
+	 * @return 
+	 */
+	int getAnswer();
 	
 	/**
 	 * display the question text and the multiple choice answers 
 	 * @param questionId
 	 * @return the question and the answer choices
 	 */
-	String displayQuestion(int questionId);
-	
-	
+	void displayQuestion();
 	
 	
 }
