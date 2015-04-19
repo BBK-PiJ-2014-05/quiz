@@ -39,7 +39,15 @@ public interface QuizGame {
 	 */
 	int generateId();
 	
+	/**
+	 * get the id of the quiz
+	 * @return id
+	 */
 	int getQuizId();
+	
+	String getQuizName();
+	
+	ArrayList<QuizQuestion> getQuestionSet();
 	
 	
 	

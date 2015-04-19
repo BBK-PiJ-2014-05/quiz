@@ -37,5 +37,30 @@ public class QuizGameImpl implements QuizGame, Serializable{
 		System.out.println(quizId);
 		return quizId;
 	}
+	
+	@Override
+	public String toString(){
+		String s = "QuizName: " + quizName;
+		System.out.println(s);
+		return s;
+	}
+	
+	public String getQuizName(){
+		return quizName;
+		
+	}
+	
+	public ArrayList<QuizQuestion> getQuestionSet(){
+		return questionSet;
+	}
+	
+	
+	/**
+	 * For testing purposes only - otherwise tests fail as new objects are instantiated
+	 */
+	
+	public static void resetId(){
+		nextId = 0;
+	}
 
 }
