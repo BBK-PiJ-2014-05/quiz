@@ -33,11 +33,6 @@ public interface QuizGame {
 	 */
 	int getQuestionCount();
 	
-	/**
-	 * generate a unique int to assign to the quiz
-	 * @return id
-	 */
-	int generateId();
 	
 	/**
 	 * get the id of the quiz
@@ -48,6 +43,10 @@ public interface QuizGame {
 	String getQuizName();
 	
 	ArrayList<QuizQuestion> getQuestionSet();
+	
+	void closeGame();
+	
+	boolean getGameStatus();
 	
 	
 	

@@ -9,12 +9,14 @@ public class QuizGameImpl implements QuizGame, Serializable{
 	private int quizId = 0;
 	private static int nextId = 0;
 	private ArrayList<QuizQuestion> questionSet;
+	private boolean open;
 
 	
 	public QuizGameImpl(String quizName){
 		this.quizName = quizName;
 		quizId = generateId();
 		questionSet = new ArrayList<QuizQuestion>();
+		open = true;
 	}
 
 	public void loadQuizQuestion(QuizQuestion question){
@@ -29,7 +31,7 @@ public class QuizGameImpl implements QuizGame, Serializable{
 		questionSet.remove(question);
 	}
 	
-	public int generateId(){
+	private int generateId(){
 		return nextId++;
 	}
 	
@@ -52,6 +54,14 @@ public class QuizGameImpl implements QuizGame, Serializable{
 	
 	public ArrayList<QuizQuestion> getQuestionSet(){
 		return questionSet;
+	}
+	
+	public void closeGame(){
+		open = false;
+	}
+	
+	public boolean getGameStatus(){
+		return open;
 	}
 	
 	

@@ -18,11 +18,19 @@ public class QuizQuestionImplTest {
 	q.addAnswerChoice("Albany", true);
 	q.addAnswerChoice("White Plains", false);
 	q.addAnswerChoice("Empire State Building", false);
+	QuizQuestionImpl.resetId();
 	}
 	
 	@Test
 	public void testNotNull() {
 		assertNotNull(q);
+	}
+	
+	@Test 
+	public void testgetId(){
+		int output = q.getQuestionId();
+		int expected = 0;
+		assertEquals(expected,output);
 	}
 	
 	@Test

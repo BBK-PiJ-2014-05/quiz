@@ -63,6 +63,11 @@ public interface QuizQuestion {
 	* @return correct
 	*/
 	boolean verifyAnswer(int selection);
+	
+	int getQuestionId();
+	
+	int generateId();
+	
 
 }
 

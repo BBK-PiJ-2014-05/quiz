@@ -9,11 +9,14 @@ public class QuizQuestionImpl implements QuizQuestion, Serializable{
 	private String question;
 	private ArrayList<String> answerChoices;
 	private int answer;
+	private int questionId;
+	private static int nextId;
 
 	public QuizQuestionImpl(String question) {
 		this.question = question;
 		answerChoices = new ArrayList<String>();
 		answer = 0;
+		questionId = generateId();
 	}
 
 	public void addAnswerChoice(String answerChoice, boolean correct) {
@@ -52,8 +55,22 @@ public class QuizQuestionImpl implements QuizQuestion, Serializable{
 		}
 		return temp;
 	}
+	
+	public int getQuestionId(){
+		return questionId;
+	}
 
-
+	public int generateId(){
+		return nextId++;
+	}
+	
+	/**
+	 * for testing purposes only
+	 */
+	
+	public static void resetId(){
+		nextId = 0;
+	}
 
 }
 

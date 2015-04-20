@@ -89,6 +89,21 @@ QuizGame game1 = new QuizGameImpl("Roman Empire");
 		assertEquals(expected,output);
 	}
 	
+	@Test
+	public void testGetGameStatus(){
+		boolean output = game.getGameStatus();
+		boolean expected = true;
+		assertEquals(expected,output);
+	}
+	
+	@Test
+	public void testCloseGame(){
+		game.closeGame();
+		boolean output = game.getGameStatus();
+		boolean expected = false;
+		assertEquals(expected,output);
+		
+	}
 	
 
 }
