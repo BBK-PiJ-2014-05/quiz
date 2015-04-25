@@ -5,23 +5,31 @@ import java.io.Serializable;
 public class PlayerImpl implements Player, Serializable {
 
 	private String playerName;
-	private int playerHighScore;
+	private int playerId;
+	private static int nextId;
 	
 	
 	public PlayerImpl(String name) {
 		playerName = name;
-		playerHighScore = 0;
+		playerId = generateId();
 	}
 	
 	public String getPlayerName(){
 		return playerName;
 	}
 	
-
-	@Override
-	public int getHighScore() {
-		return playerHighScore;
+	
+	public int getPlayerId(){
+		return playerId;
 	}
+	
+	
+	
+	private int generateId(){
+		return nextId++;
+	}
+
+	
 	
 	
 

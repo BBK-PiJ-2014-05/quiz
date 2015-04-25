@@ -55,7 +55,7 @@ public class QuizQuestionImpl implements QuizQuestion, Serializable{
 		}
 		return temp;
 	}
-	
+
 	public int getQuestionId(){
 		return questionId;
 	}
@@ -63,14 +63,13 @@ public class QuizQuestionImpl implements QuizQuestion, Serializable{
 	public int generateId(){
 		return nextId++;
 	}
-	
+
 	/**
 	 * for testing purposes only
 	 */
-	
+
 	public static void resetId(){
 		nextId = 0;
 	}
 
 }
-

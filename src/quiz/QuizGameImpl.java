@@ -11,7 +11,7 @@ public class QuizGameImpl implements QuizGame, Serializable{
 	private ArrayList<QuizQuestion> questionSet;
 	private boolean open;
 
-	
+
 	public QuizGameImpl(String quizName){
 		this.quizName = quizName;
 		quizId = generateId();
@@ -22,55 +22,56 @@ public class QuizGameImpl implements QuizGame, Serializable{
 	public void loadQuizQuestion(QuizQuestion question){
 		questionSet.add(question);
 	}
-			
+
 	public int getQuestionCount(){
 		return questionSet.size();
 	}
-	
+
 	public void removeQuizQuestion(QuizQuestion question){
 		questionSet.remove(question);
 	}
-	
+
 	private int generateId(){
 		return nextId++;
 	}
-	
+
 	public int getQuizId(){
 		System.out.println(quizId);
 		return quizId;
 	}
-	
-	@Override
-	public String toString(){
-		String s = "QuizName: " + quizName;
-		System.out.println(s);
-		return s;
-	}
-	
+
+	//@Override
+	//public String toString(){
+	//	String s = "QuizName: " + quizName;
+	//	System.out.println(s);
+	//	return s;
+	//}
+
 	public String getQuizName(){
 		return quizName;
-		
+
 	}
-	
+
 	public ArrayList<QuizQuestion> getQuestionSet(){
 		return questionSet;
 	}
-	
+
 	public void closeGame(){
 		open = false;
 	}
-	
+
 	public boolean getGameStatus(){
 		return open;
 	}
-	
-	
+
+
 	/**
 	 * For testing purposes only - otherwise tests fail as new objects are instantiated
 	 */
-	
+
 	public static void resetId(){
 		nextId = 0;
 	}
+
 
 }

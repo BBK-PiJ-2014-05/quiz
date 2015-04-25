@@ -8,7 +8,7 @@ import java.rmi.registry.LocateRegistry;
 
 public class QuizServerLaunch {
 
-	public static void main(String[] args) {
+public static void main(String[] args) {
 		
 		QuizServerLaunch qsl = new QuizServerLaunch();
 		qsl.launch();
@@ -33,3 +33,4 @@ public class QuizServerLaunch {
 	}
 
 }
+

@@ -14,14 +14,8 @@ public interface Player {
 	
 	public String getPlayerName();
 
-	/**
-	 * Best score achieved
-	 * 
-	 * @return highScore
-	 */
-	
-	int getHighScore();
-	
+	public int getPlayerId();
+
 	
 	
 	
