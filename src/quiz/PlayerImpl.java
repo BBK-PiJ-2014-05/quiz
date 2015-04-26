@@ -23,9 +23,12 @@ public class PlayerImpl implements Player, Serializable {
 		return playerId;
 	}
 	
+	/**
+	 * synchronise the id count to avoid misplaced id's with PlayerImpl objects
+	 * @return
+	 */
 	
-	
-	private int generateId(){
+	private synchronized int generateId(){
 		return nextId++;
 	}
 

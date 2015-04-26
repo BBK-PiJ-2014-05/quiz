@@ -60,7 +60,9 @@ public class QuizQuestionImpl implements QuizQuestion, Serializable{
 		return questionId;
 	}
 
-	public int generateId(){
+	
+	
+	public synchronized int generateId(){
 		return nextId++;
 	}
 

@@ -31,21 +31,18 @@ public class QuizGameImpl implements QuizGame, Serializable{
 		questionSet.remove(question);
 	}
 
-	private int generateId(){
+	/**
+	 * synchronise to avoid mismatched id's
+	 * @return
+	 */
+	private synchronized int generateId(){
 		return nextId++;
 	}
 
 	public int getQuizId(){
-		System.out.println(quizId);
 		return quizId;
 	}
 
-	//@Override
-	//public String toString(){
-	//	String s = "QuizName: " + quizName;
-	//	System.out.println(s);
-	//	return s;
-	//}
 
 	public String getQuizName(){
 		return quizName;
